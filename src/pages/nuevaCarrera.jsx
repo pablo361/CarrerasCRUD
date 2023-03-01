@@ -12,7 +12,7 @@ const initialValues = {
 
 }
 
-function NuevaCarrera() {
+function NuevaCarrera(){
 
     return (
         <div className="container">
