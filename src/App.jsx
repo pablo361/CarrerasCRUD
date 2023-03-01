@@ -9,9 +9,9 @@ function App() {
     const [carreras, setCarreras] = useState([])
 
     useEffect(() => {
-        axios.get('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0')
+        axios.get('https://www-desa.ucasal.edu.ar/exp/manage-carreras/cambio-descripcion.php?a=carreras')
             .then(res => {
-                setCarreras(res.data.results)
+                setCarreras(res.data)
             })
     },[])
 
@@ -44,13 +44,13 @@ function App() {
                 </thead>
                 <tbody>
                 {carreras.map(carrera =>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>{carrera.name}</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
+                    <tr key={carrera.id_carrera}>
+                        <th scope="row">{carrera.id_sede}</th>
+                        <td>{carrera.codare}</td>
+                        <td>{carrera.codcar}</td>
+                        <td>{carrera.modo}</td>
+                        <td>{carrera.nombre}</td>
+                        <td> <a target={"_blank"} href={`https://www-desa.ucasal.edu.ar/landing/estudiar-${carrera.nombre_corto}.php`}>{carrera.nombre_corto}</a> </td>
                     </tr>
                 )}
 
