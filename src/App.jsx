@@ -50,7 +50,7 @@ function App() {
                         <td>{carrera.codcar}</td>
                         <td>{carrera.modo}</td>
                         <td>{carrera.nombre}</td>
-                        <td> <a target={"_blank"} href={`https://www-desa.ucasal.edu.ar/landing/estudiar-${carrera.nombre_corto}.php`}>{carrera.nombre_corto}</a> </td>
+                        <td> <a target={"_blank"} href={`https://www-desa.ucasal.edu.ar/landing/${carrera.nom_landing}.php`}>{carrera.nombre_corto}</a> </td>
                     </tr>
                 )}
 
